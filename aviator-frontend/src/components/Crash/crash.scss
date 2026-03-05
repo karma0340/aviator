@@ -1,0 +1,301 @@
+.crash-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 100% 0%, #17181c, #000000);
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.82);
+  font-family: 'Inter', sans-serif;
+}
+
+.top-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 24px;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+  .fun-mode {
+    color: #f1c40f; // GOLD for Fun Mode
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+
+.sunray-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 1;
+  overflow: hidden;
+  transform-origin: bottom left;
+
+  &.active {
+    opacity: 0.15;
+    animation: sunRayPulse 3s infinite alternate ease-in-out;
+  }
+
+  .sunray-img {
+    position: absolute;
+    bottom: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
+  }
+}
+
+/* ── Stars and Space ── */
+.star-field {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 4px white;
+}
+
+/* ── SVG Container ── */
+.curve-svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ── Aircraft and Exhaust ── */
+.plane-wrap {
+  position: absolute;
+  z-index: 5;
+  transform-origin: center;
+  transition: transform 0.1s linear, left 0.1s linear, top 0.1s linear;
+  filter: drop-shadow(0 10px 10px rgba(227, 7, 55, 0.3));
+}
+
+.plane-container {
+  position: relative;
+  width: 90px;
+  height: 48px;
+
+  .plane-body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .plane-propeller {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    right: -2px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &.spinning {
+      animation: rotateProp 0.1s infinite linear;
+    }
+  }
+}
+
+.exhaust-particle {
+  position: absolute;
+  background: #ff6060;
+  border-radius: 50%;
+  filter: blur(2px);
+  z-index: 4;
+}
+
+.plane-flyaway {
+  position: absolute;
+  width: 85px;
+  height: 50px;
+  z-index: 5;
+  top: -50px;
+  /* Animate off screen upwards */
+  right: -50px;
+  transition: all 0.5s ease-in;
+  opacity: 0;
+}
+
+/* ── Multiplier Display ── */
+.mult-display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+  transition: opacity 0.2s;
+
+  &.hidden {
+    display: none !important;
+  }
+
+  .mult-blur {
+    position: absolute;
+    width: 250%;
+    height: 250%;
+    opacity: 0.4;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+.crashed-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flew-away-label {
+  color: #ffffff; // White text over red value
+  font-size: 28px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.mult-value {
+  font-size: 110px;
+  font-weight: 950; // Ultra bold
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.2), 0 4px 12px rgba(0, 0, 0, 0.9);
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.mult-display.crashed .mult-value {
+  color: #e30737;
+  font-size: 120px; // Slightly larger on crash
+}
+
+/* ── BET phase overlay ── */
+.bet-phase-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+  z-index: 10;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.next-round-label {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 2px;
+  letter-spacing: 1.5px;
+  opacity: 0.8;
+}
+
+.countdown-timer {
+  color: #e30737;
+  font-size: 38px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  text-shadow: 0 0 10px rgba(227, 7, 55, 0.4);
+}
+
+.waiting-label {
+  color: #c90928;
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.countdown-bar-wrap {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.countdown-bar {
+  height: 100%;
+  background: #d07206;
+  /* Spribe orange */
+  border-radius: 3px;
+  transition: width 0.05s linear;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.03);
+  }
+}
+
+@keyframes rotateProp {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+@keyframes sunRayPulse {
+  0% {
+    opacity: 0.12;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0.22;
+    transform: scale(1.05);
+  }
+}
+
+/* ── Mobile queries ── */
+@media (max-width: 768px) {
+  .mult-value {
+    font-size: 56px;
+  }
+
+  .plane-wrap {
+    width: 60px;
+    height: 35px;
+  }
+}

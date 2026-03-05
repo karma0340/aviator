@@ -1,0 +1,890 @@
+﻿
+> my-app@0.1.0 start
+> react-app-rewired start
+
+Starting the development server...
+
+Failed to compile.
+
+Error: [BABEL] E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\src\index.tsx: Cannot find module 'E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\index.js'. Please verify that the package.json has a valid "main" entry (While processing: "E:\\freelancing\\aviator-crash-master\\aviator-crash-master\\aviator-frontend\\node_modules\\react-scripts\\node_modules\\babel-preset-react-app\\index.js")
+[1m[31mERROR[39m[22m in [1m./src/index.tsx[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ./node_modules/react-scripts/node_modules/babel-loader/lib/index.js):
+[1m[31mError[39m[22m[1m: [BABEL] E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\src\index.tsx: Cannot find module 'E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\index.js'. Please verify that the package.json has a valid "main" entry (While processing: "E:\\freelancing\\aviator-crash-master\\aviator-crash-master\\aviator-frontend\\node_modules\\react-scripts\\node_modules\\babel-preset-react-app\\index.js")
+    at tryPackage (node:internal/modules/cjs/loader:525:19)
+    at Module._findPath (node:internal/modules/cjs/loader:793:18)
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1406:27)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)
+    at Module._load (node:internal/modules/cjs/loader:1227:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js:6:12)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js:68:53)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js:10:25)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js:11:20)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at module.exports (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\create.js:80:9)
+    at module.exports (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\index.js:19:10)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\gensync-utils\async.js:35:33)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:186:15)[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./node_modules/react-scripts/node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ./node_modules/react-scripts/node_modules/babel-loader/lib/index.js):
+[1m[31mError[39m[22m[1m: [BABEL] E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\webpack-dev-server\client\index.js: Cannot find module 'E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\index.js'. Please verify that the package.json has a valid "main" entry (While processing: "E:\\freelancing\\aviator-crash-master\\aviator-crash-master\\aviator-frontend\\node_modules\\react-scripts\\node_modules\\babel-preset-react-app\\dependencies.js")
+    at tryPackage (node:internal/modules/cjs/loader:525:19)
+    at Module._findPath (node:internal/modules/cjs/loader:793:18)
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1406:27)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)
+    at Module._load (node:internal/modules/cjs/loader:1227:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js:6:12)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js:68:53)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js:10:25)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js:11:20)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at module.exports (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\dependencies.js:83:9)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\gensync-utils\async.js:35:33)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:186:15)
+    at E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:216:13[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./node_modules/webpack/hot/dev-server.js[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ./node_modules/react-scripts/node_modules/babel-loader/lib/index.js):
+[1m[31mError[39m[22m[1m: [BABEL] E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\webpack\hot\dev-server.js: Cannot find module 'E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\index.js'. Please verify that the package.json has a valid "main" entry (While processing: "E:\\freelancing\\aviator-crash-master\\aviator-crash-master\\aviator-frontend\\node_modules\\react-scripts\\node_modules\\babel-preset-react-app\\dependencies.js")
+    at tryPackage (node:internal/modules/cjs/loader:525:19)
+    at Module._findPath (node:internal/modules/cjs/loader:793:18)
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1406:27)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)
+    at Module._load (node:internal/modules/cjs/loader:1227:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js:6:12)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js:68:53)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js:10:25)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js:11:20)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at module.exports (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\dependencies.js:83:9)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\gensync-utils\async.js:35:33)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:186:15)
+    at E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:216:13[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./node_modules/react-scripts/node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ./node_modules/react-scripts/node_modules/babel-loader/lib/index.js):
+[1m[31mError[39m[22m[1m: [BABEL] E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@pmmmwh\react-refresh-webpack-plugin\client\ReactRefreshEntry.js: Cannot find module 'E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\index.js'. Please verify that the package.json has a valid "main" entry (While processing: "E:\\freelancing\\aviator-crash-master\\aviator-crash-master\\aviator-frontend\\node_modules\\react-scripts\\node_modules\\babel-preset-react-app\\dependencies.js")
+    at tryPackage (node:internal/modules/cjs/loader:525:19)
+    at Module._findPath (node:internal/modules/cjs/loader:793:18)
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1406:27)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)
+    at Module._load (node:internal/modules/cjs/loader:1227:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js:6:12)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js:68:53)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js:10:25)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js:11:20)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at module.exports (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\dependencies.js:83:9)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\gensync-utils\async.js:35:33)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:186:15)
+    at E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:216:13[39m[22m
+
+[1m[31mERROR[39m[22m in [1m[eslint] [1m[31mFailed[39m[22m[1m to load config "react-app" to extend from.
+Referenced from: E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\package.json[39m[22m
+
+webpack compiled with [1m[31m5 errors[39m[22m
+Failed to compile.
+
+Error: [BABEL] E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\src\index.tsx: Cannot find module '@babel/core'
+Require stack:
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\create.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\module-types.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\configuration.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\node_modules\workbox-build\node_modules\@rollup\plugin-babel\dist\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\node_modules\workbox-build\build\lib\bundle.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\build\generate-sw.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\build\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\config\webpack.config.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-app-rewired\overrides\webpack.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-app-rewired\scripts\start.js (While processing: "E:\\freelancing\\aviator-crash-master\\aviator-crash-master\\aviator-frontend\\node_modules\\react-scripts\\node_modules\\babel-preset-react-app\\index.js")
+    at Generator.next (<anonymous>)
+[1m[31mERROR[39m[22m in [1m./src/index.tsx[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ./node_modules/react-scripts/node_modules/babel-loader/lib/index.js):
+[1m[31mError[39m[22m[1m: [BABEL] E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\src\index.tsx: Cannot find module '@babel/core'
+Require stack:
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\create.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\module-types.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\configuration.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\node_modules\workbox-build\node_modules\@rollup\plugin-babel\dist\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\node_modules\workbox-build\build\lib\bundle.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\build\generate-sw.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\build\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\config\webpack.config.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-app-rewired\overrides\webpack.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-app-rewired\scripts\start.js (While processing: "E:\\freelancing\\aviator-crash-master\\aviator-crash-master\\aviator-frontend\\node_modules\\react-scripts\\node_modules\\babel-preset-react-app\\index.js")
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1421:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)
+    at Module._load (node:internal/modules/cjs/loader:1227:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js:6:12)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js:68:53)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js:10:25)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js:11:20)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at module.exports (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\create.js:80:9)
+    at module.exports (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\index.js:19:10)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\gensync-utils\async.js:35:33)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:186:15)
+    at E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:216:13
+    at Generator.next (<anonymous>)[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./node_modules/react-scripts/node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ./node_modules/react-scripts/node_modules/babel-loader/lib/index.js):
+[1m[31mError[39m[22m[1m: [BABEL] E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\webpack-dev-server\client\index.js: Cannot find module '@babel/core'
+Require stack:
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\dependencies.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\module-types.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\configuration.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\node_modules\workbox-build\node_modules\@rollup\plugin-babel\dist\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\node_modules\workbox-build\build\lib\bundle.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\build\generate-sw.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\build\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\config\webpack.config.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-app-rewired\overrides\webpack.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-app-rewired\scripts\start.js (While processing: "E:\\freelancing\\aviator-crash-master\\aviator-crash-master\\aviator-frontend\\node_modules\\react-scripts\\node_modules\\babel-preset-react-app\\dependencies.js")
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1421:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)
+    at Module._load (node:internal/modules/cjs/loader:1227:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js:6:12)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js:68:53)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js:10:25)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js:11:20)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at module.exports (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\dependencies.js:83:9)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\gensync-utils\async.js:35:33)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:186:15)
+    at E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:216:13
+    at Generator.next (<anonymous>)
+    at E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\full.js:180:21[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./node_modules/webpack/hot/dev-server.js[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ./node_modules/react-scripts/node_modules/babel-loader/lib/index.js):
+[1m[31mError[39m[22m[1m: [BABEL] E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\webpack\hot\dev-server.js: Cannot find module '@babel/core'
+Require stack:
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\dependencies.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\module-types.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\configuration.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\node_modules\workbox-build\node_modules\@rollup\plugin-babel\dist\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\node_modules\workbox-build\build\lib\bundle.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\build\generate-sw.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\build\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\config\webpack.config.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-app-rewired\overrides\webpack.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-app-rewired\scripts\start.js (While processing: "E:\\freelancing\\aviator-crash-master\\aviator-crash-master\\aviator-frontend\\node_modules\\react-scripts\\node_modules\\babel-preset-react-app\\dependencies.js")
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1421:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)
+    at Module._load (node:internal/modules/cjs/loader:1227:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js:6:12)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js:68:53)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js:10:25)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js:11:20)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at module.exports (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\dependencies.js:83:9)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\gensync-utils\async.js:35:33)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:186:15)
+    at E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:216:13
+    at Generator.next (<anonymous>)
+    at E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\full.js:180:21[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./node_modules/react-scripts/node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ./node_modules/react-scripts/node_modules/source-map-loader/dist/cjs.js):
+[1m[31mError[39m[22m[1m: ENOENT: no such file or directory, open 'E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@pmmmwh\react-refresh-webpack-plugin\client\ReactRefreshEntry.js'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m[eslint] [1m[31mFailed[39m[22m[1m to load config "react-app" to extend from.
+Referenced from: E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\package.json[39m[22m
+
+webpack compiled with [1m[31m5 errors[39m[22m
+Failed to compile.
+
+Error: [BABEL] E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\src\index.tsx: Cannot find module '@babel/core'
+Require stack:
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\create.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\module-types.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\configuration.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\node_modules\workbox-build\node_modules\@rollup\plugin-babel\dist\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\node_modules\workbox-build\build\lib\bundle.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\build\generate-sw.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\build\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\config\webpack.config.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-app-rewired\overrides\webpack.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-app-rewired\scripts\start.js (While processing: "E:\\freelancing\\aviator-crash-master\\aviator-crash-master\\aviator-frontend\\node_modules\\react-scripts\\node_modules\\babel-preset-react-app\\index.js")
+    at Generator.next (<anonymous>)
+[1m[31mERROR[39m[22m in [1m./src/index.tsx[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ./node_modules/react-scripts/node_modules/babel-loader/lib/index.js):
+[1m[31mError[39m[22m[1m: [BABEL] E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\src\index.tsx: Cannot find module '@babel/core'
+Require stack:
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\create.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\module-types.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\configuration.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\node_modules\workbox-build\node_modules\@rollup\plugin-babel\dist\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\node_modules\workbox-build\build\lib\bundle.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\build\generate-sw.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\build\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\config\webpack.config.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-app-rewired\overrides\webpack.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-app-rewired\scripts\start.js (While processing: "E:\\freelancing\\aviator-crash-master\\aviator-crash-master\\aviator-frontend\\node_modules\\react-scripts\\node_modules\\babel-preset-react-app\\index.js")
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1421:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)
+    at Module._load (node:internal/modules/cjs/loader:1227:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js:6:12)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js:68:53)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js:10:25)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js:11:20)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at module.exports (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\create.js:80:9)
+    at module.exports (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\index.js:19:10)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\gensync-utils\async.js:35:33)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:186:15)
+    at E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:216:13
+    at Generator.next (<anonymous>)[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./node_modules/react-scripts/node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ./node_modules/react-scripts/node_modules/babel-loader/lib/index.js):
+[1m[31mError[39m[22m[1m: [BABEL] E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\webpack-dev-server\client\index.js: Cannot find module '@babel/core'
+Require stack:
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\dependencies.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\module-types.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\configuration.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\node_modules\workbox-build\node_modules\@rollup\plugin-babel\dist\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\node_modules\workbox-build\build\lib\bundle.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\build\generate-sw.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\build\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\config\webpack.config.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-app-rewired\overrides\webpack.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-app-rewired\scripts\start.js (While processing: "E:\\freelancing\\aviator-crash-master\\aviator-crash-master\\aviator-frontend\\node_modules\\react-scripts\\node_modules\\babel-preset-react-app\\dependencies.js")
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1421:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)
+    at Module._load (node:internal/modules/cjs/loader:1227:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js:6:12)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js:68:53)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js:10:25)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js:11:20)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at module.exports (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\dependencies.js:83:9)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\gensync-utils\async.js:35:33)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:186:15)
+    at E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:216:13
+    at Generator.next (<anonymous>)
+    at E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\full.js:180:21[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./node_modules/webpack/hot/dev-server.js[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ./node_modules/react-scripts/node_modules/babel-loader/lib/index.js):
+[1m[31mError[39m[22m[1m: [BABEL] E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\webpack\hot\dev-server.js: Cannot find module '@babel/core'
+Require stack:
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\dependencies.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\module-types.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\configuration.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\node_modules\workbox-build\node_modules\@rollup\plugin-babel\dist\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\node_modules\workbox-build\build\lib\bundle.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\build\generate-sw.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\build\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\config\webpack.config.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-app-rewired\overrides\webpack.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-app-rewired\scripts\start.js (While processing: "E:\\freelancing\\aviator-crash-master\\aviator-crash-master\\aviator-frontend\\node_modules\\react-scripts\\node_modules\\babel-preset-react-app\\dependencies.js")
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1421:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)
+    at Module._load (node:internal/modules/cjs/loader:1227:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js:6:12)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js:68:53)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js:10:25)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js:11:20)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at module.exports (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\dependencies.js:83:9)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\gensync-utils\async.js:35:33)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:186:15)
+    at E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:216:13
+    at Generator.next (<anonymous>)
+    at E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\full.js:180:21[39m[22m
+
+[1m[31mERROR[39m[22m in [1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve 'E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@pmmmwh\react-refresh-webpack-plugin\client\ReactRefreshEntry.js' in 'E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m[eslint] [1m[31mFailed[39m[22m[1m to load config "react-app" to extend from.
+Referenced from: E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\package.json[39m[22m
+
+webpack compiled with [1m[31m5 errors[39m[22m
+Failed to compile.
+
+Error: [BABEL] E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\src\index.tsx: Cannot find module '@babel/core'
+Require stack:
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\create.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\module-types.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\configuration.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\node_modules\workbox-build\node_modules\@rollup\plugin-babel\dist\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\node_modules\workbox-build\build\lib\bundle.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\build\generate-sw.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\build\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\config\webpack.config.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-app-rewired\overrides\webpack.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-app-rewired\scripts\start.js (While processing: "E:\\freelancing\\aviator-crash-master\\aviator-crash-master\\aviator-frontend\\node_modules\\react-scripts\\node_modules\\babel-preset-react-app\\index.js")
+    at Generator.next (<anonymous>)
+[1m[31mERROR[39m[22m in [1m./src/index.tsx[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ./node_modules/react-scripts/node_modules/babel-loader/lib/index.js):
+[1m[31mError[39m[22m[1m: [BABEL] E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\src\index.tsx: Cannot find module '@babel/core'
+Require stack:
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\create.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\module-types.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\configuration.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\node_modules\workbox-build\node_modules\@rollup\plugin-babel\dist\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\node_modules\workbox-build\build\lib\bundle.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\build\generate-sw.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\build\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\config\webpack.config.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-app-rewired\overrides\webpack.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-app-rewired\scripts\start.js (While processing: "E:\\freelancing\\aviator-crash-master\\aviator-crash-master\\aviator-frontend\\node_modules\\react-scripts\\node_modules\\babel-preset-react-app\\index.js")
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1421:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)
+    at Module._load (node:internal/modules/cjs/loader:1227:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js:6:12)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js:68:53)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js:10:25)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js:11:20)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at module.exports (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\create.js:80:9)
+    at module.exports (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\index.js:19:10)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\gensync-utils\async.js:35:33)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:186:15)
+    at E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:216:13
+    at Generator.next (<anonymous>)[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./node_modules/react-scripts/node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ./node_modules/react-scripts/node_modules/babel-loader/lib/index.js):
+[1m[31mError[39m[22m[1m: [BABEL] E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\webpack-dev-server\client\index.js: Cannot find module '@babel/core'
+Require stack:
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\dependencies.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\module-types.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\configuration.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\files\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\node_modules\workbox-build\node_modules\@rollup\plugin-babel\dist\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\node_modules\workbox-build\build\lib\bundle.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\build\generate-sw.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\workbox-webpack-plugin\build\index.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\config\webpack.config.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-app-rewired\overrides\webpack.js
+- E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-app-rewired\scripts\start.js (While processing: "E:\\freelancing\\aviator-crash-master\\aviator-crash-master\\aviator-frontend\\node_modules\\react-scripts\\node_modules\\babel-preset-react-app\\dependencies.js")
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1421:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)
+    at Module._load (node:internal/modules/cjs/loader:1227:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\node_modules\@babel\plugin-bugfix-safari-class-field-initializer-scope\lib\index.js:6:12)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\available-plugins.js:68:53)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\filter-items.js:10:25)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\node_modules\@babel\preset-env\lib\index.js:11:20)
+    at Module._compile (node:internal/modules/cjs/loader:1761:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.require (node:internal/modules/cjs/loader:1504:12)
+    at require (node:internal/modules/helpers:152:16)
+    at module.exports (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\babel-preset-react-app\dependencies.js:83:9)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\gensync-utils\async.js:35:33)
+    at async (E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:186:15)
+    at E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\node_modules\gensync\index.js:216:13
+    at Generator.next (<anonymous>)
+    at E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@babel\core\lib\config\full.js:180:21[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./node_modules/webpack/hot/dev-server.js[39m[22m
+[1mModule build [1m[31mfailed[39m[22m[1m (from ./node_modules/react-scripts/node_modules/source-map-loader/dist/cjs.js):
+[1m[31mError[39m[22m[1m: ENOENT: no such file or directory, open 'E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\webpack\hot\dev-server.js'[39m[22m
+
+[1m[31mERROR[39m[22m in [1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve 'E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\node_modules\react-scripts\node_modules\@pmmmwh\react-refresh-webpack-plugin\client\ReactRefreshEntry.js' in 'E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m[eslint] [1m[31mFailed[39m[22m[1m to load config "react-app" to extend from.
+Referenced from: E:\freelancing\aviator-crash-master\aviator-crash-master\aviator-frontend\package.json[39m[22m
+
+webpack compiled with [1m[31m5 errors[39m[22m
