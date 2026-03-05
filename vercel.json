@@ -1,0 +1,12 @@
+{
+    "version": 2,
+    "buildCommand": "cd aviator-frontend && npm install && npm run build",
+    "outputDirectory": "aviator-frontend/build",
+    "framework": "create-react-app",
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
+}

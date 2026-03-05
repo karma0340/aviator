@@ -36,9 +36,8 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "set \"GENERATE_SOURCEMAP=false\" && react-app-rewired build",
-    "start1": "set PORT=4002 && react-scripts start",
-    "build1": "react-scripts build",
+    "build": "GENERATE_SOURCEMAP=false react-app-rewired build",
+    "start-dev": "set PORT=4002 && react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -43,22 +43,17 @@
 
 ```
 aviator-crash-game/
-├── aviator-front/
+├── aviator-frontend/
 │   ├── src/
-│   │   ├── @types/
 │   │   ├── components/
 │   │   ├── assets/
 │   │   ├── utils/
-├── aviator-back/
+├── aviator-backend/
 │   ├── src/
 │   │   ├── controllers/
 │   │   ├── models/
 │   │   ├── routes/
 │   │   ├── services/
-│   │   └── utils/
-|   | 
-|___aviator-backend
-   
 ```
 
 ---
@@ -67,23 +62,45 @@ aviator-crash-game/
 
 ### Frontend
 
-1. Navigate to the aviator-front directory:
-
+1. Navigate to the `aviator-frontend` directory:
+```bash
+cd aviator-frontend
 ```
-cd aviator-front
+2. Install dependencies:
+```bash
+npm install
+```
+3. Build for production:
+```bash
+npm run build
 ```
 
-2. Install dependencies
-
+### Backend
+1. Navigate to the `aviator-backend` directory:
+```bash
+cd aviator-backend
 ```
-yarn install
+2. Install dependencies:
+```bash
+npm install
 ```
-
-3. Start the development server:
-
-```
+3. Start the server:
+```bash
 npm run dev
 ```
+
+## 🚀 Vercel Deployment
+
+For a seamless deployment of the frontend on Vercel:
+
+1. **Connect Repository**: Point Vercel to this repository.
+2. **Root Directory**: Select `aviator-frontend` as the root directory in Vercel settings.
+3. **Environment Variables**: Add `REACT_APP_API_URL` with the URL of your deployed backend (e.g., `https://your-backend.render.com`).
+4. **Build Settings**: Vercel will automatically detect the settings from `package.json` and `vercel.json`.
+
+> [!IMPORTANT]
+> The backend should be deployed separately (e.g., on Render or Railway) as WebSockets (Socket.IO) require a persistent server which Vercel Serverless Functions do not natively support.
+
 
 ## 🎉 How to Play
 
