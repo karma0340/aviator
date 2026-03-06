@@ -44,15 +44,19 @@ app.get('/', (_req, res) => {
     });
 });
 
-// ── MongoDB → Socket.IO → Game Engine ────────────────────────────────
-const PORT = parseInt(process.env.PORT || '5000');
+// ── Export for Vercel ──────────────────────────────────────────────────
+export default app;
+
+// ── Startup logic ───────────────────────────────
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/aviator';
 
 async function bootstrap() {
     try {
         console.log(`⏳ Connecting to MongoDB: ${MONGO_URI}`);
-        await mongoose.connect(MONGO_URI);
-        console.log('✅ MongoDB connected');
+        if (mongoose.connection.readyState === 0) {
+            await mongoose.connect(MONGO_URI);
+            console.log('✅ MongoDB connected');
+        }
 
         // Init socket handlers
         initSocketController(io);
@@ -69,33 +73,35 @@ async function bootstrap() {
         gameEngine.start(nextRoundId);
         console.log(`✅ Game engine started at round ID: ${nextRoundId}`);
 
-        // Start HTTP server
-        server.listen(PORT, () => {
-            console.log('');
-            console.log('====================================================');
-            console.log(`  🛩️  Aviator Backend running on port ${PORT}`);
-            console.log('====================================================');
-            console.log(`  🌐 Health:    http://localhost:${PORT}/`);
-            console.log(`  🔌 Socket:    ws://localhost:${PORT}`);
-            console.log(`  📦 API:       http://localhost:${PORT}/api`);
-            console.log('');
-            console.log('  ▶️  To play:');
-            console.log(`     Open http://localhost:3000/?cert=YOUR_NAME`);
-            console.log('====================================================');
-            console.log('');
-        });
+        // Only listen if not running as a Vercel serverless function
+        if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+            const PORT = parseInt(process.env.PORT || '5000');
+            server.listen(PORT, () => {
+                console.log('');
+                console.log('====================================================');
+                console.log(`  🛩️  Aviator Backend running on port ${PORT}`);
+                console.log('====================================================');
+                console.log(`  🌐 Health:    http://localhost:${PORT}/`);
+                console.log(`  🔌 Socket:    ws://localhost:${PORT}`);
+                console.log(`  📦 API:       http://localhost:${PORT}/api`);
+                console.log('====================================================');
+                console.log('');
+            });
+        }
     } catch (err) {
         console.error('❌ Failed to start server:', err);
-        process.exit(1);
     }
 }
 
-// Graceful shutdown
-process.on('SIGINT', () => {
-    console.log('\n🛑 Shutting down...');
-    gameEngine.stop();
-    mongoose.disconnect();
-    process.exit(0);
-});
+// Graceful shutdown (skip if on Vercel)
+if (!process.env.VERCEL) {
+    process.on('SIGINT', () => {
+        console.log('\n🛑 Shutting down...');
+        gameEngine.stop();
+        mongoose.disconnect();
+        process.exit(0);
+    });
+}
 
+// Trigger bootstrap
 bootstrap();

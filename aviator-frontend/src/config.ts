@@ -1,7 +1,11 @@
+const isProd = process.env.NODE_ENV === 'production';
+const defaultHost = isProd ? window.location.origin : 'http://localhost:5000';
+const host = process.env.REACT_APP_API_URL || defaultHost;
+
 export const config = {
-  development: false,
+  development: !isProd,
   debug: true,
   appKey: "crash-0.1.0",
-  api: `${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/api`,
-  wss: (process.env.REACT_APP_API_URL || 'http://localhost:5000') as string,
+  api: `${host}/api`,
+  wss: host as string,
 };
