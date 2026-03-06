@@ -100,7 +100,7 @@ export const Provider = ({ children }: any) => {
 
   const [bettedUsers, setBettedUsers] = React.useState<BettedUserType[]>([]);
   const update = (attrs: Partial<ContextDataType>) => {
-    setState({ ...state, ...attrs });
+    setState((prev) => ({ ...prev, ...attrs }));
   };
   const [previousHand, setPreviousHand] = React.useState<UserType[]>([]);
   const [history, setHistory] = React.useState<number[]>([]);
@@ -113,8 +113,9 @@ export const Provider = ({ children }: any) => {
   newBetState = userBetState;
   const [rechargeState, setRechargeState] = React.useState(false);
   const [currentTarget, setCurrentTarget] = React.useState(0);
+  const emittedBetsRef = React.useRef<{ [key: number]: Set<string> }>({});
   const updateUserBetState = (attrs: Partial<UserStatusType>) => {
-    setUserBetState({ ...userBetState, ...attrs });
+    setUserBetState((prev) => ({ ...prev, ...attrs }));
   };
 
   const [betLimit, setBetLimit] = React.useState<GameBetLimit>({
@@ -188,12 +189,13 @@ export const Provider = ({ children }: any) => {
     });
 
     socket.on("myBetState", (user: UserType) => {
-      const attrs = userBetState;
-      attrs.fbetState = false;
-      attrs.fbetted = user.f.betted;
-      attrs.sbetState = false;
-      attrs.sbetted = user.s.betted;
-      setUserBetState(attrs);
+      setUserBetState(prev => ({
+        ...prev,
+        fbetState: false,
+        fbetted: user.f.betted,
+        sbetState: false,
+        sbetted: user.s.betted,
+      }));
     });
 
     socket.on("myInfo", (user: UserType) => {
@@ -308,8 +310,15 @@ export const Provider = ({ children }: any) => {
 
   React.useEffect(() => {
     if (gameState.GameState === "BET") {
+      const roundId = gameState.time; // Using time or roundId as a proxy for the current round uniqueness
+      if (!emittedBetsRef.current[roundId]) {
+        emittedBetsRef.current[roundId] = new Set();
+      }
+
+      const emitted = emittedBetsRef.current[roundId];
+
       // Logic for Panel F
-      if (userBetState.fbetState && !userBetState.fbetted) {
+      if (userBetState.fbetState && !userBetState.fbetted && !emitted.has('f')) {
         if (state.userInfo.balance >= state.userInfo.f.betAmount) {
           const data = {
             betAmount: state.userInfo.f.betAmount,
@@ -317,6 +326,7 @@ export const Provider = ({ children }: any) => {
             type: "f",
             auto: state.userInfo.f.auto,
           };
+          emitted.add('f');
           socket.emit("playBet", data);
           updateUserBetState({ fbetState: false, fbetted: true });
           update({ userInfo: { ...state.userInfo, balance: state.userInfo.balance - state.userInfo.f.betAmount } });
@@ -328,7 +338,7 @@ export const Provider = ({ children }: any) => {
       }
 
       // Logic for Panel S
-      if (userBetState.sbetState && !userBetState.sbetted) {
+      if (userBetState.sbetState && !userBetState.sbetted && !emitted.has('s')) {
         if (state.userInfo.balance >= state.userInfo.s.betAmount) {
           const data = {
             betAmount: state.userInfo.s.betAmount,
@@ -336,6 +346,7 @@ export const Provider = ({ children }: any) => {
             type: "s",
             auto: state.userInfo.s.auto,
           };
+          emitted.add('s');
           socket.emit("playBet", data);
           updateUserBetState({ sbetState: false, sbetted: true });
           update({ userInfo: { ...state.userInfo, balance: state.userInfo.balance - state.userInfo.s.betAmount } });
@@ -346,7 +357,7 @@ export const Provider = ({ children }: any) => {
         }
       }
     }
-  }, [gameState.GameState, userBetState.fbetState, userBetState.sbetState]);
+  }, [gameState.GameState, gameState.time, userBetState.fbetState, userBetState.sbetState, state.userInfo.balance]);
 
   const getMyBets = async () => {
     try {
@@ -376,7 +387,10 @@ export const Provider = ({ children }: any) => {
   }, [gameState.GameState]);
 
   const updateUserInfo = (attrs: Partial<UserType>) => {
-    update({ userInfo: { ...state.userInfo, ...attrs } });
+    setState(prev => ({
+      ...prev,
+      userInfo: { ...prev.userInfo, ...attrs }
+    }));
   };
   const handleGetSeed = () => {
     toast.info(`Server Seed: ${state.seed || 'Generating...'}`);
