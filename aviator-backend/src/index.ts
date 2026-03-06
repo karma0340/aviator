@@ -1,3 +1,4 @@
+console.log('🚀 SERVER STARTING...');
 import 'dotenv/config';
 import express from 'express';
 import http from 'http';
@@ -52,7 +53,7 @@ const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/aviator';
 
 async function bootstrap() {
     try {
-        console.log(`⏳ Connecting to MongoDB: ${MONGO_URI}`);
+        console.log(`⏳ Connecting to MongoDB...`);
         if (mongoose.connection.readyState === 0) {
             await mongoose.connect(MONGO_URI);
             console.log('✅ MongoDB connected');
@@ -62,45 +63,30 @@ async function bootstrap() {
         initSocketController(io);
         console.log('✅ Socket.IO initialized');
 
-        // Fetch highest flyDetailID to avoid E11000 duplicate keys
+        // Fetch highest flyDetailID
         const latestFlyDetail = await FlyDetail.findOne().sort({ flyDetailID: -1 });
         let nextRoundId = 1;
         if (latestFlyDetail) {
-            nextRoundId = latestFlyDetail.flyDetailID + 2; // Since flyDetailID = roundId - 1
+            nextRoundId = latestFlyDetail.flyDetailID + 2;
         }
 
         // Start game engine
         gameEngine.start(nextRoundId);
-        console.log(`✅ Game engine started at round ID: ${nextRoundId}`);
+        console.log(`✅ Game engine started: Round ${nextRoundId}`);
 
-        // Only listen if not running as a Vercel serverless function
-        if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
-            const PORT = parseInt(process.env.PORT || '5000');
-            server.listen(PORT, () => {
-                console.log('');
+        // Start listening
+        if (!process.env.VERCEL) {
+            const PORT = process.env.PORT || 10000; // Render default
+            server.listen(PORT, '0.0.0.0', () => {
                 console.log('====================================================');
-                console.log(`  🛩️  Aviator Backend running on port ${PORT}`);
+                console.log(`  🛩️  Aviator Backend is LIVE on port ${PORT}`);
                 console.log('====================================================');
-                console.log(`  🌐 Health:    http://localhost:${PORT}/`);
-                console.log(`  🔌 Socket:    ws://localhost:${PORT}`);
-                console.log(`  📦 API:       http://localhost:${PORT}/api`);
-                console.log('====================================================');
-                console.log('');
             });
         }
     } catch (err) {
-        console.error('❌ Failed to start server:', err);
+        console.error('❌ CRITICAL STARTUP ERROR:', err);
+        process.exit(1);
     }
-}
-
-// Graceful shutdown (skip if on Vercel)
-if (!process.env.VERCEL) {
-    process.on('SIGINT', () => {
-        console.log('\n🛑 Shutting down...');
-        gameEngine.stop();
-        mongoose.disconnect();
-        process.exit(0);
-    });
 }
 
 // Trigger bootstrap
