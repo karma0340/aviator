@@ -16,11 +16,6 @@ export default function Main() {
         <div className="play-board-wrapper">
           <div className="stage-canvas">
             <Crash />
-            {isDemo && (
-              <div className="dom-container">
-                <div className="fun-mode">FUN MODE</div>
-              </div>
-            )}
           </div>
         </div>
       </div>
