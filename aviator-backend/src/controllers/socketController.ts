@@ -373,9 +373,9 @@ function buildBetUserForPreviousHand(bet: ActiveBet, crashPoint: number) {
         name: bet.userName,
         avatar: bet.avatar,
         betAmount: bet.betAmount,
-        cashAmount: bet.cashouted ? bet.cashAmount : 0,
+        cashOut: bet.cashouted ? bet.cashAmount : 0,
         cashouted: bet.cashouted,
-        cashoutAt: bet.cashoutAt,
+        target: bet.cashoutAt,
         flyAway: crashPoint,
     };
 }

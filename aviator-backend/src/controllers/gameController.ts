@@ -272,7 +272,7 @@ class GameEngine {
             betAmount: bet.betAmount,
             cashOut: bet.cashAmount,
             cashouted: bet.cashouted,
-            target: bet.target,
+            target: bet.cashouted ? bet.cashoutAt : bet.target,
             img: bet.avatar,
         }));
     }
