@@ -256,19 +256,9 @@ export const initSocketController = (io: Server) => {
                     return;
                 }
 
-                const cashAmount = result.cashAmount!;
-                const user = await User.findByIdAndUpdate(
-                    userData._id,
-                    { $inc: { balance: cashAmount } },
-                    { new: true }
-                );
-
-                if (user) {
-                    socket.emit('success', `Cashed out! Won ${cashAmount.toFixed(2)} INR`);
-                    socket.emit('myInfo', buildEmptyUserPayload(user, socket.id));
-                    io.emit('bettedUserInfo', gameEngine.getBettedUsers());
-                    console.log(`💸 Cashout: ${user.userName} → ${cashAmount.toFixed(2)} INR`);
-                }
+                // Winnings are already added via the onAutoCashout callback triggered by processCashout
+                // We just log and confirm here
+                console.log(`💸 Cashout processed: ${userData.userName} [${data.type}]`);
             } catch (err) {
                 console.error('❌ cashOut error:', err);
                 socket.emit('error', { message: 'Error cashing out', index: data.type });
