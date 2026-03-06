@@ -104,10 +104,6 @@ class GameEngine {
         this.state.startTime = Date.now();
         this.state.currentMultiplier = 1.00;
 
-        if (this.onPlayingPhaseStart) {
-            this.onPlayingPhaseStart(Array.from(this.activeBets.values()));
-        }
-
         const tickInterval = 100; // ms per tick
         this.ticker = setInterval(() => {
             const elapsed = Date.now() - (this.state.startTime || Date.now());
@@ -212,21 +208,23 @@ class GameEngine {
         return { success: true };
     }
 
-    public cancelBet(socketId: string, type: 'f' | 's'): { success: boolean; error?: string } {
+    public cancelBet(socketId: string, type: 'f' | 's'): { success: boolean; error?: string; betAmount?: number } {
         if (this.state.phase !== 'BET') {
             return { success: false, error: 'Cannot cancel. Betting phase is over.' };
         }
 
         const key = `${socketId}_${type}`;
-        if (!this.activeBets.has(key)) {
+        const bet = this.activeBets.get(key);
+        if (!bet) {
             return { success: false, error: 'Bet not found to cancel' };
         }
 
+        const betAmount = bet.betAmount;
         this.activeBets.delete(key);
         // We can emit onBetPlaced again to refresh the betted users list
         if (this.onBetPlaced) this.onBetPlaced();
 
-        return { success: true };
+        return { success: true, betAmount };
     }
 
     public processCashout(socketId: string, type: 'f' | 's', endTarget?: number): { success: boolean; cashAmount?: number; error?: string } {
