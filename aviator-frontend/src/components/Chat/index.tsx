@@ -243,21 +243,23 @@ export default function PerfectLiveChat() {
             <div className="tools">
               <div
                 className="smiles"
+                style={{ cursor: "pointer" }}
                 onClick={() => {
                   setGifPicker(false);
                   setEmojiPicker(!emojiPicker);
                 }}
               >
-                <HiOutlineFaceSmile cursor={"pointer"} size={14} />
+                <HiOutlineFaceSmile size={14} />
               </div>
               <div
                 className="gif"
+                style={{ cursor: "pointer" }}
                 onClick={() => {
                   setEmojiPicker(false);
                   setGifPicker(!gifPicker);
                 }}
               >
-                <HiOutlineGif cursor={"pointer"} size={14} />
+                <HiOutlineGif size={14} />
               </div>
               <div className="left-length">{160 - msgContent.length}</div>
             </div>
