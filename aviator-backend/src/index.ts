@@ -76,7 +76,7 @@ async function bootstrap() {
 
         // Start listening
         if (!process.env.VERCEL) {
-            const PORT = process.env.PORT || 10000; // Render default
+            const PORT = Number(process.env.PORT) || 10000;
             server.listen(PORT, '0.0.0.0', () => {
                 console.log('====================================================');
                 console.log(`  🛩️  Aviator Backend is LIVE on port ${PORT}`);
