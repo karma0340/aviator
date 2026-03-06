@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 // import { useCrashContext } from "../context";
 import { toast } from 'react-toastify';
-import Context, { callCashOut } from "../../context";
+import Context, { callCashOut, callCancelBet } from "../../context";
 
 interface BetProps {
 	index: 'f' | 's'
@@ -293,6 +293,7 @@ const Bet = ({ index, add, setAdd }: BetProps) => {
 								<button className="btn-danger h-[70%]" onClick={() => {
 									onBetClick(false);
 									update({ ...state, [`${index}autoCound`]: 0, userInfo: { ...state.userInfo, [index]: { ...state.userInfo[index], auto: false } } })
+									callCancelBet(index);
 								}}><label>CANCEL</label></button>
 							</> :
 							<button onClick={() => onBetClick(true)} className="btn-success">

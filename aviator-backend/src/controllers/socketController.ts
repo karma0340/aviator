@@ -107,6 +107,32 @@ export const initSocketController = (io: Server) => {
         io.emit('bettedUserInfo', []);
     };
 
+    /** When plane starts flying, deduct balance for all committed bets */
+    gameEngine.onPlayingPhaseStart = async (bets: ActiveBet[]) => {
+        for (const bet of bets) {
+            try {
+                // Determine if user has enough balance before actually taking the bet. 
+                // Wait, if they don't, we can't deduct. For now, atomic increment.
+                const updatedUser = await User.findByIdAndUpdate(
+                    bet.userId,
+                    { $inc: { balance: -bet.betAmount } },
+                    { new: true }
+                );
+
+                if (updatedUser) {
+                    const socket = io.sockets.sockets.get(bet.socketId);
+                    if (socket) {
+                        // Send updated state back with current balance from DB
+                        socket.emit('myBetState', buildEmptyUserPayload(updatedUser, bet.socketId));
+                        socket.emit('myInfo', buildEmptyUserPayload(updatedUser, bet.socketId));
+                    }
+                }
+            } catch (err) {
+                console.error('Error deducting bet at takeoff:', err);
+            }
+        }
+    };
+
     /** Auto cashout processed by game engine — inform that socket */
     gameEngine.onAutoCashout = async (bet: ActiveBet) => {
         try {
@@ -222,18 +248,12 @@ export const initSocketController = (io: Server) => {
                     return;
                 }
 
-                // Deduct bet from balance using atomic increment
-                const updatedUser = await User.findByIdAndUpdate(
-                    user._id,
-                    { $inc: { balance: -betAmount } },
-                    { new: true }
-                );
+                // IMPORTANT: Balance is NO LONGER deducted here immediately.
+                // It is reserved, and will be deducted at flight takeoff inside `onPlayingPhaseStart`
 
-                if (!updatedUser) throw new Error("Balance update failed");
-
-                // Send updated state back with current balance from DB
-                socket.emit('myBetState', buildEmptyUserPayload(updatedUser, socket.id));
-                socket.emit('myInfo', buildEmptyUserPayload(updatedUser, socket.id));
+                // Send updated state back with current balance from DB (balance unchanged)
+                socket.emit('myBetState', buildEmptyUserPayload(user, socket.id));
+                socket.emit('myInfo', buildEmptyUserPayload(user, socket.id));
 
                 // Broadcast updated betted users
                 io.emit('bettedUserInfo', gameEngine.getBettedUsers());
@@ -266,6 +286,26 @@ export const initSocketController = (io: Server) => {
             } catch (err) {
                 console.error('❌ cashOut error:', err);
                 socket.emit('error', { message: 'Error cashing out', index: data.type });
+            }
+        });
+
+        // ── cancelBet ─────────────────────────────────────────────────────
+        socket.on('cancelBet', async (data: { type: 'f' | 's' }) => {
+            try {
+                const userData = connectedUsers.get(socket.id);
+                if (!userData) return;
+
+                const result = gameEngine.cancelBet(socket.id, data.type);
+                if (result.success) {
+                    const user = await User.findById(userData._id);
+                    if (user) {
+                        socket.emit('myBetState', buildEmptyUserPayload(user, socket.id));
+                        socket.emit('myInfo', buildEmptyUserPayload(user, socket.id));
+                        console.log(`🚫 Bet cancelled: ${user.userName} [${data.type}]`);
+                    }
+                }
+            } catch (err) {
+                console.error('❌ cancelBet error:', err);
             }
         });
 

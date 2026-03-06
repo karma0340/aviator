@@ -40,6 +40,7 @@ class GameEngine {
     public onRoundEnd: ((crashPoint: number, bets: ActiveBet[]) => void) | null = null;
     public onBetPlaced: (() => void) | null = null;
     public onRoundStart: (() => void) | null = null;
+    public onPlayingPhaseStart: ((bets: ActiveBet[]) => void) | null = null;
     public onAutoCashout: ((bet: ActiveBet) => void) | null = null;
     public previousHand: any[] = [];
 
@@ -102,6 +103,10 @@ class GameEngine {
         this.state.phase = 'PLAYING';
         this.state.startTime = Date.now();
         this.state.currentMultiplier = 1.00;
+
+        if (this.onPlayingPhaseStart) {
+            this.onPlayingPhaseStart(Array.from(this.activeBets.values()));
+        }
 
         const tickInterval = 100; // ms per tick
         this.ticker = setInterval(() => {
@@ -202,6 +207,23 @@ class GameEngine {
         };
 
         this.activeBets.set(key, bet);
+        if (this.onBetPlaced) this.onBetPlaced();
+
+        return { success: true };
+    }
+
+    public cancelBet(socketId: string, type: 'f' | 's'): { success: boolean; error?: string } {
+        if (this.state.phase !== 'BET') {
+            return { success: false, error: 'Cannot cancel. Betting phase is over.' };
+        }
+
+        const key = `${socketId}_${type}`;
+        if (!this.activeBets.has(key)) {
+            return { success: false, error: 'Bet not found to cancel' };
+        }
+
+        this.activeBets.delete(key);
+        // We can emit onBetPlaced again to refresh the betted users list
         if (this.onBetPlaced) this.onBetPlaced();
 
         return { success: true };
