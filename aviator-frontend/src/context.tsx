@@ -30,7 +30,7 @@ export interface PlayerType {
 
 const Context = React.createContext<ContextType>(null!);
 
-const socket: Socket = io(process.env.REACT_APP_API_URL || "http://localhost:5000", {
+const socket: Socket = io(config.wss, {
   transports: ['websocket', 'polling'],
   autoConnect: true,
   timeout: 20000,
