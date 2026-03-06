@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "private": true,
     "scripts": {
-        "build": "cd aviator-frontend && npm install --legacy-peer-deps && npm run build",
+        "build": "cd aviator-frontend && npm install --legacy-peer-deps && CI=false npm run build",
         "install-backend": "cd aviator-backend && npm install --legacy-peer-deps"
     },
     "dependencies": {

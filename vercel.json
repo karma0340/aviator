@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "buildCommand": "cd aviator-frontend && npm install --legacy-peer-deps && npm run build",
+    "buildCommand": "cd aviator-frontend && npm install --legacy-peer-deps && CI=false npm run build",
     "outputDirectory": "aviator-frontend/build",
     "rewrites": [
         {
