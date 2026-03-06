@@ -329,7 +329,10 @@ export const Provider = ({ children }: any) => {
           emitted.add('f');
           socket.emit("playBet", data);
           updateUserBetState({ fbetState: false, fbetted: true });
-          update({ userInfo: { ...state.userInfo, balance: state.userInfo.balance - state.userInfo.f.betAmount } });
+          setState(prev => ({
+            ...prev,
+            userInfo: { ...prev.userInfo, balance: Math.round((prev.userInfo.balance - prev.userInfo.f.betAmount) * 100) / 100 }
+          }));
         } else if (state.userInfo.f.auto) {
           toast.error("Low balance. Autoplay F stopped.");
           updateUserInfo({ f: { ...state.userInfo.f, auto: false } });
@@ -349,7 +352,10 @@ export const Provider = ({ children }: any) => {
           emitted.add('s');
           socket.emit("playBet", data);
           updateUserBetState({ sbetState: false, sbetted: true });
-          update({ userInfo: { ...state.userInfo, balance: state.userInfo.balance - state.userInfo.s.betAmount } });
+          setState(prev => ({
+            ...prev,
+            userInfo: { ...prev.userInfo, balance: Math.round((prev.userInfo.balance - prev.userInfo.s.betAmount) * 100) / 100 }
+          }));
         } else if (state.userInfo.s.auto) {
           toast.error("Low balance. Autoplay S stopped.");
           updateUserInfo({ s: { ...state.userInfo.s, auto: false } });

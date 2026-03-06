@@ -110,17 +110,16 @@ export const initSocketController = (io: Server) => {
     /** Auto cashout processed by game engine — inform that socket */
     gameEngine.onAutoCashout = async (bet: ActiveBet) => {
         try {
-            // Add winnings immediately
-            await User.findByIdAndUpdate(bet.userId, { $inc: { balance: bet.cashAmount } });
+            // Add winnings immediately using atomic increment
+            const user = await User.findByIdAndUpdate(
+                bet.userId,
+                { $inc: { balance: Math.round(bet.cashAmount * 100) / 100 } },
+                { new: true }
+            );
             const socket = io.sockets.sockets.get(bet.socketId);
-            if (socket) {
-                const user = await User.findById(bet.userId);
-                if (user) {
-                    socket.emit('success', `Cashed out at ${bet.cashoutAt}x! Won ${bet.cashAmount.toFixed(2)} INR`);
-                    socket.emit('myInfo', {
-                        ...buildEmptyUserPayload(user, socket.id),
-                    });
-                }
+            if (socket && user) {
+                socket.emit('success', `Cashed out at ${bet.cashoutAt}x! Won ${bet.cashAmount.toFixed(2)} INR`);
+                socket.emit('myInfo', buildEmptyUserPayload(user, socket.id));
             }
             // Refresh betted users list
             io.emit('bettedUserInfo', gameEngine.getBettedUsers());
@@ -223,13 +222,18 @@ export const initSocketController = (io: Server) => {
                     return;
                 }
 
-                // Deduct bet from balance
-                user.balance = Math.round((user.balance - betAmount) * 100) / 100;
-                await user.save();
+                // Deduct bet from balance using atomic increment
+                const updatedUser = await User.findByIdAndUpdate(
+                    user._id,
+                    { $inc: { balance: -betAmount } },
+                    { new: true }
+                );
 
-                // Send updated state back
-                socket.emit('myBetState', buildEmptyUserPayload(user, socket.id));
-                socket.emit('myInfo', buildEmptyUserPayload(user, socket.id));
+                if (!updatedUser) throw new Error("Balance update failed");
+
+                // Send updated state back with current balance from DB
+                socket.emit('myBetState', buildEmptyUserPayload(updatedUser, socket.id));
+                socket.emit('myInfo', buildEmptyUserPayload(updatedUser, socket.id));
 
                 // Broadcast updated betted users
                 io.emit('bettedUserInfo', gameEngine.getBettedUsers());
