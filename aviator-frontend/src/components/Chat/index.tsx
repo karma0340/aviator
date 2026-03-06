@@ -7,7 +7,7 @@ import axios from "axios";
 
 import Context from "../../context";
 import "./chat.scss";
-import config from "../../config.json";
+import { config } from "../../config";
 import { displayName } from "../utils";
 
 export default function PerfectLiveChat() {
@@ -71,31 +71,28 @@ export default function PerfectLiveChat() {
   };
 
   const getAllChats = async (flag: boolean) => {
-    let response: any = await axios.post(
-      `${process.env.REACT_APP_DEVELOPMENT === "true"
-        ? config.development_api
-        : config.production_api
-      }/get-all-chat`
-    );
-    setMsgData(response?.data?.data || []);
-    if (flag === false) {
-      setMsgReceived(!msgReceived);
+    try {
+      let response: any = await axios.post(`${config.api}/get-all-chat`);
+      setMsgData(response?.data?.data || []);
+      if (flag === false) {
+        setMsgReceived(!msgReceived);
+      }
+    } catch (e) {
+      console.error("Chat fetch error:", e);
     }
   };
 
   const handleLikeChat = async (chatItem: any) => {
-    let response = await axios.post(
-      `${process.env.REACT_APP_DEVELOPMENT === "true"
-        ? config.development_api
-        : config.production_api
-      }/like-chat`,
-      {
+    try {
+      let response = await axios.post(`${config.api}/like-chat`, {
         chatID: chatItem._id,
         userId: userInfo.userId,
+      });
+      if (response?.data?.status) {
+        getAllChats(true);
       }
-    );
-    if (response?.data?.status) {
-      getAllChats(true);
+    } catch (e) {
+      console.error("Chat like error:", e);
     }
   };
 
@@ -140,8 +137,12 @@ export default function PerfectLiveChat() {
                     <div className="avatar-block">
                       <img
                         className="avatar"
-                        src={item.avatar || "./avatars/av-5.png"}
-                        alt={item.avatar || "./avatars/av-5.png"}
+                        src={item.avatar && item.avatar !== "" ? item.avatar : "https://i.pravatar.cc/100?u=" + (item?.userName || "anonymous")}
+                        alt="avatar"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.src = "https://i.pravatar.cc/100?u=" + (item?.userName || "anonymous");
+                        }}
                       />
                     </div>
                     <div className="msg-block">

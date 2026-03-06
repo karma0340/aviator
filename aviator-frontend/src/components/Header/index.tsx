@@ -22,7 +22,9 @@ export default function Header() {
           <img src={logo} alt="Logo" className="logo-img"></img>
         </div>
         <div className="mode-selector">
-          <span className="mode-label">Demo mode</span>
+          <span className={`mode-label ${isDemo ? "demo-active" : ""}`}>
+            {isDemo ? "FUN MODE" : "REAL MODE"}
+          </span>
           <label className="switch">
             <input type="checkbox" checked={isDemo} onChange={(e) => setIsDemo(e.target.checked)} />
             <span className="slider round"></span>

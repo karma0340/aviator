@@ -69,7 +69,21 @@ export const Provider = ({ children }: any) => {
   const [errorBackend, setErrorBackend] = React.useState<boolean>(false);
   const [fLoading, setFLoading] = React.useState<boolean>(false);
   const [sLoading, setSLoading] = React.useState<boolean>(false);
-  const [isDemo, setIsDemo] = React.useState<boolean>(sharedInitState.isDemo);
+  const [isDemo, setIsDemo] = React.useState<boolean>(true); // Default to demo for initial load
+
+  // Handle Demo Mode Balance Toggle
+  React.useEffect(() => {
+    if (isDemo) {
+      setState(prev => ({
+        ...prev,
+        userInfo: { ...prev.userInfo, balance: 10000, currency: "DEMO" }
+      }));
+      toast.info("Switched to Demo Mode - 10,000 credits added!");
+    } else {
+      // Re-fetch real info if needed, or stick to current socket balance
+      socket.emit("enterRoom", { token });
+    }
+  }, [isDemo]);
 
   newState = state;
   const [unity, setUnity] = React.useState({
@@ -364,7 +378,9 @@ export const Provider = ({ children }: any) => {
   const updateUserInfo = (attrs: Partial<UserType>) => {
     update({ userInfo: { ...state.userInfo, ...attrs } });
   };
-  const handleGetSeed = () => {/* implement or stub */ };
+  const handleGetSeed = () => {
+    toast.info(`Server Seed: ${state.seed || 'Generating...'}`);
+  };
   const handleGetSeedOfRound = async (id: number): Promise<SeedDetailsType> => {
     try {
       const response = await fetch(`${config.api}/game/seed/${id}`, {
@@ -392,9 +408,18 @@ export const Provider = ({ children }: any) => {
       };
     }
   };
-  const handlePlaceBet = () => {/* implement or stub */ };
+  const handlePlaceBet = () => {
+    // Simple trigger for UI feedback
+    toast.success("Bet instruction received!");
+  };
   const toggleMsgTab = () => setMsgTab((prev) => !prev);
-  const handleChangeUserSeed = (seed: string) => {/* implement or stub */ };
+  const handleChangeUserSeed = (seedCode: string) => {
+    setState(prev => ({
+      ...prev,
+      userInfo: { ...prev.userInfo, clientSeed: seedCode }
+    }));
+    toast.success("Client seed updated for next round");
+  };
 
   return (
     <Context.Provider

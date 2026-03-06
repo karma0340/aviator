@@ -27,6 +27,12 @@ $whiteBg: #868b8d;
       font-size: 13px;
       color: #9b9c9e;
       font-weight: 600;
+      transition: color 0.3s ease;
+
+      &.demo-active {
+        color: #f1c40f; // Golden yellow for Fun Mode
+        text-shadow: 0 0 8px rgba(241, 196, 15, 0.3);
+      }
     }
   }
 

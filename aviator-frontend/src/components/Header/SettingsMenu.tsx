@@ -16,7 +16,7 @@ import copy from "copy-to-clipboard";
 
 import Context from "../../context";
 import axios from "axios";
-import config from "../../config.json";
+import { config } from "../../config";
 import ChatImg from "../../assets/images/chat.svg";
 import { displayName, generateRandomString } from "../utils";
 
@@ -110,11 +110,7 @@ const Menu = ({ setHowto }) => {
         flewAwayAudioEle.pause();
       }
       try {
-        await axios.post(
-          `${process.env.REACT_APP_DEVELOPMENT === "true"
-            ? config.development_api
-            : config.production_api
-          }/update-info`,
+        await axios.post(`${config.api}/update-info`,
           {
             userId: userInfo.userId,
             updateData: { isSoundEnable: checked },
@@ -136,11 +132,7 @@ const Menu = ({ setHowto }) => {
   const handleToggleMusic = useCallback(
     async (checked) => {
       try {
-        await axios.post(
-          `${process.env.REACT_APP_DEVELOPMENT === "true"
-            ? config.development_api
-            : config.production_api
-          }/update-info`,
+        await axios.post(`${config.api}/update-info`,
           {
             userId: userInfo.userId,
             updateData: { isMusicEnable: checked },
@@ -173,11 +165,7 @@ const Menu = ({ setHowto }) => {
   };
 
   const handleImgClick = async (avatar: string) => {
-    const response: any = await axios.post(
-      `${process.env.REACT_APP_DEVELOPMENT === "true"
-        ? config.development_api
-        : config.production_api
-      }/update-info`,
+    const response: any = await axios.post(`${config.api}/update-info`,
       {
         userId: userInfo.userId,
         updateData: { avatar },
