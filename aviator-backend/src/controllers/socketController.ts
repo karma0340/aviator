@@ -56,13 +56,8 @@ export const initSocketController = (io: Server) => {
                     });
 
                     // If the user did NOT cash out, they lost — balance already deducted when bet placed
-                    // If they DID cash out, we add their winnings
-                    if (bet.cashouted) {
-                        await User.findOneAndUpdate(
-                            { _id: bet.userId },
-                            { $inc: { balance: bet.cashAmount } }
-                        );
-                    }
+                    // If they DID cash out, we don't add balance here because it's already done
+                    // immediately upon cashout (manual or auto) to provide instant feedback.
 
                     // Send finish event to this socket
                     const socket = io.sockets.sockets.get(bet.socketId);
