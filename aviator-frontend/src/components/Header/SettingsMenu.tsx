@@ -404,11 +404,10 @@ const Menu = ({ setHowto }) => {
                         <span className="current"> Current: </span>
                         <span className="main-key">{key}</span>
                       </div>
-                      <span className="copy-icon">
+                      <span className="copy-icon" onClick={() => copy(key)} style={{ cursor: 'pointer' }}>
                         <ImCopy
                           color="#868b8d"
                           size={16}
-                          onClick={() => copy(key)}
                         />
                       </span>
                     </div>
@@ -439,11 +438,10 @@ const Menu = ({ setHowto }) => {
                         <span className="current"> Current: </span>
                         <span className="main-key">{customKey}</span>
                       </div>
-                      <span className="copy-icon">
+                      <span className="copy-icon" onClick={() => copy(customKey)} style={{ cursor: 'pointer' }}>
                         <ImCopy
                           color="#868b8d"
                           size={16}
-                          onClick={() => copy(customKey)}
                         />
                       </span>
                     </div>
