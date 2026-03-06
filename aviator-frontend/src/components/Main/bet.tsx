@@ -46,40 +46,40 @@ const Bet = ({ index, add, setAdd }: BetProps) => {
 	// const { index } = props;
 
 	const minus = (type: FieldNameType) => {
-		let value = state;
+		let value = { ...state };
 		if (type === "betAmount") {
-			if (betAmount - 0.1 < minBet) {
+			if (betAmount - 1.0 < minBet) {
 				value.userInfo[index][type] = minBet
 			} else {
-				value.userInfo[index][type] = Number((Number(betAmount) - 1).toFixed(2))
+				value.userInfo[index][type] = Math.max(minBet, Number((Number(betAmount) - 1.0).toFixed(0)))
 			}
 		} else {
-			if (value[`${index + type}`] - 0.1 < 0.1) {
-				value[`${index + type}`] = 0.1
+			if (value[`${index + type}`] - 1.0 < 1.0) {
+				value[`${index + type}`] = 1.0
 			} else {
-				value[`${index + type}`] = Number((Number(value[`${index + type}`]) - 0.1).toFixed(2))
+				value[`${index + type}`] = Number((Number(value[`${index + type}`]) - 1.0).toFixed(0))
 			}
 		}
 		update(value);
 	}
 
 	const plus = (type: FieldNameType) => {
-		let value = state;
+		let value = { ...state };
 		if (type === "betAmount") {
-			if (value.userInfo[index][type] + 0.1 > state.userInfo.balance) {
-				value.userInfo[index][type] = Math.round(state.userInfo.balance * 100) / 100
+			if (value.userInfo[index][type] + 1.0 > state.userInfo.balance) {
+				value.userInfo[index][type] = Math.floor(state.userInfo.balance)
 			} else {
-				if (value.userInfo[index][type] + 0.1 > maxBet) {
+				if (value.userInfo[index][type] + 1.0 > maxBet) {
 					value.userInfo[index][type] = maxBet;
 				} else {
-					value.userInfo[index][type] = Number((Number(betAmount) + 0.1).toFixed(2))
+					value.userInfo[index][type] = Number((Number(betAmount) + 1.0).toFixed(0))
 				}
 			}
 		} else {
-			if (value[`${index + type}`] + 0.1 > state.userInfo.balance) {
-				value[`${index + type}`] = Math.round(state.userInfo.balance * 100) / 100
+			if (value[`${index + type}`] + 1.0 > state.userInfo.balance) {
+				value[`${index + type}`] = Math.floor(state.userInfo.balance)
 			} else {
-				value[`${index + type}`] = Number((Number(value[`${index + type}`]) + 0.1).toFixed(2))
+				value[`${index + type}`] = Number((Number(value[`${index + type}`]) + 1.0).toFixed(0))
 			}
 		}
 		update(value);
@@ -275,7 +275,10 @@ const Bet = ({ index, add, setAdd }: BetProps) => {
 					</div>
 					<div className="buttons-block">
 						{betted ? GameState === "PLAYING" ?
-							<button className="btn-waiting" onClick={() => { callCashOut(currentTarget, index) }}>
+							<button className="btn-waiting" onClick={() => {
+								updateUserBetState({ [`${index}betted`]: false, [`${index}betState`]: false });
+								callCashOut(currentTarget, index);
+							}}>
 								<span className="cashout-label-wrap">
 									<label className="cashout-label">CASHOUT</label>
 									<label className="amount">
@@ -313,7 +316,10 @@ const Bet = ({ index, add, setAdd }: BetProps) => {
 							<div className="auto-bet-wrapper">
 								<div className="auto-bet">
 									{auto ? (
-										<button onClick={() => onAutoBetClick(false)} className="auto-play-btn btn-danger" >{autoCound}</button>
+										<button onClick={() => {
+											onAutoBetClick(false);
+											setCount(0);
+										}} className="auto-play-btn btn-danger" >{autoCound}</button>
 									) : (
 										<button onClick={() => { setShowModal(true); }} className="auto-play-btn btn-primary">AUTO PLAY</button>
 									)}
