@@ -1,6 +1,8 @@
 import { Router, Request, Response } from 'express';
 import GameBet from '../models/GameBet';
 import FlyDetail from '../models/FlyDetail';
+import User from '../models/User';
+import Message from '../models/Message';
 
 const router = Router();
 
@@ -156,6 +158,50 @@ router.get('/get-year-history', async (_req: Request, res: Response) => {
             .lean();
 
         return res.json({ status: true, data: bets });
+    } catch (err) {
+        return res.status(500).json({ status: false, message: 'Server error' });
+    }
+});
+
+/**
+ * POST /api/get-all-chat
+ */
+router.post('/get-all-chat', async (_req, res) => {
+    try {
+        const chats = await Message.find().sort({ createdAt: -1 }).limit(100).lean();
+        return res.json({ status: true, data: chats.reverse() });
+    } catch (err) {
+        return res.status(500).json({ status: false, message: 'Server error' });
+    }
+});
+
+/**
+ * POST /api/like-chat
+ */
+router.post('/like-chat', async (req, res) => {
+    try {
+        const { chatID, userId } = req.body;
+        const chat = await Message.findById(chatID);
+        if (chat) {
+            if (!chat.likesIDs.includes(userId)) {
+                chat.likesIDs.push(userId);
+                await chat.save();
+            }
+        }
+        return res.json({ status: true });
+    } catch (err) {
+        return res.status(500).json({ status: false, message: 'Server error' });
+    }
+});
+
+/**
+ * POST /api/update-info
+ */
+router.post('/update-info', async (req, res) => {
+    try {
+        const { userId, updateData } = req.body;
+        await User.findOneAndUpdate({ userId }, updateData, { upsert: true });
+        return res.json({ status: true });
     } catch (err) {
         return res.status(500).json({ status: false, message: 'Server error' });
     }
